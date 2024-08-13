@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --white-background: #f0f4f8;
+    --white-border: #dddddd;
+    --blue: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+.HookSection {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(./assets/img/background.png);
+    background-size: cover;
+    padding: 0 10%;
+    color: var(--white);
+    border-radius: 12px 12px 0 0;
+}
+
+.HookSection img {
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-data {
+    flex: 1;
+    text-align: center;
+}
+
+.main-data h1 {
+    font-size: 2.0rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-data h2 {
+    font-size: 1.2rem;
+}
+
+.All-Data {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0.8%;
+    overflow: hidden;
+}
+
+.Main-info {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+}
+
+.Main-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.Main-Description, .Main-Technologies, .Main-ContactInfo {
+    background-color: var(--white-background);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Main-Technologies {
+    max-height: auto;
+    overflow-x: auto;
+}
+
+.Main-Technologies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.Main-Technologies ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.Main-Technologies li {
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.Main-Technologies i {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.Main-Technologies li:hover i {
+    color: var(--blue);
+}
+
+.Main-ContactInfo {
+    margin-top: 20px;
+    max-height: 24vh;
+}
+
+.Main-ContactInfo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.Main-ContactInfo address {
+    font-size: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.contact-list a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.Second-Info {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    padding: 20px;
+    max-height: 95vh;
+    overflow-y: auto;
+    background-color: var(--white-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Second-Info h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item, .education-item, .course-item {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(51, 0, 255, 0.2);
+    position: relative;
+}
+
+
+
+.experience-item h3, .education-item h3, .course-item h3 {
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item p, .education-item p, .course-item p {
+    font-size: 1rem;
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .All-Data {
+        flex-direction: column;
+        gap: 0; 
+    }
+
+    .Main-info, .Second-Info {
+        flex: 1 1 100%;
+        margin-bottom: 20px; 
+    }
+
+    .Main-Technologies ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-list {
+        grid-template-columns: 1fr;
+    }
+
+    .Second-Info {
+        max-height: 80vh;
+    }
+}
